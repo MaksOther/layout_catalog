@@ -1,8 +1,8 @@
 .stars {
   display: flex;
   align-items: center;
-  margin-top: 16px;
-  padding-inline: 16px;
+  margin-top: $space-16;
+  padding-inline: $space-16;
 
   &__list {
     display: flex;
@@ -10,8 +10,8 @@
   }
 
   &__star {
-    width: 16px;
-    height: 16px;
+    width: $space-16;
+    height: $space-16;
     background-image: url(../images/star.svg);
     background-repeat: no-repeat;
     background-position: center;

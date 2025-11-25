@@ -41,6 +41,7 @@
     height: 60px;
     display: flex;
     text-transform: uppercase;
+    transition: color 300ms ease;
 
     &:hover {
       color: $button-color;

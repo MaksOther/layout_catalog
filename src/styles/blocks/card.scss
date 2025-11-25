@@ -19,6 +19,12 @@
   border: 1px solid $border-color;
   border-radius: 5px;
   background-color: #fff;
+  transition: transform 300ms;
+
+
+  &:hover {
+    transform: scale(1.2);
+  }
 
   &__img {
     width: 160px;
@@ -27,12 +33,16 @@
     margin-bottom: 40px;
   }
 
-  &__head {
+  &__title {
     padding-inline: 16px;
     font-weight: 500;
     font-size: 12px;
     line-height: 18px;
     color: $main-color;
+
+    &:hover{
+      color: $hover-title-color;
+    }
   }
 
   &__code {
