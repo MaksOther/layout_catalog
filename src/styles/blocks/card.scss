@@ -3,11 +3,18 @@
   gap: 46px 48px;
   padding: 50px 40px 72px;
   justify-content: center;
-  grid-template-columns: repeat(4, 200px);
 
-  @media (min-width: 1200px) {
-    margin: 0;
-    padding: 50px 128px 72px;
+  grid-template-columns: repeat(1, 200px);
+
+  @media (min-width: 488px) {
+    grid-template-columns: repeat(2, 200px);
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 200px);
+  }
+
+  @media (min-width: 1024px) {
     grid-template-columns: repeat(4, 200px);
   }
 }
@@ -18,9 +25,8 @@
   flex-direction: column;
   border: 1px solid $border-color;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: $background-color;
   transition: transform 300ms;
-
 
   &:hover {
     transform: scale(1.2);
@@ -39,8 +45,9 @@
     font-size: 12px;
     line-height: 18px;
     color: $main-color;
+    transition: color 300ms;
 
-    &:hover{
+    &:hover {
       color: $hover-title-color;
     }
   }
@@ -81,7 +88,7 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: #fff;
+    color: $background-color;
     background-color: $button-color;
     height: 40px;
     border-radius: 5px;
@@ -93,8 +100,13 @@
     font-weight: 700;
     text-align: center;
 
+    transition:
+      background-color 300ms,
+      color 300ms,
+      border-color 300ms;
+
     &:hover {
-      background-color: #fff;
+      background-color: $background-color;
       color: $button-color;
       border: 1px solid $button-color;
     }
